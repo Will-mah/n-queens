@@ -1,3 +1,5 @@
+import time
+
 class NQueens:
     def __init__(self, n):
         self.n = n
@@ -42,10 +44,15 @@ def display_board(board):
 
 if __name__ == "__main__":
     n = 25
+    start_time = time.time()  # Start time
     solver = NQueens(n)
     solutions = solver.solve_n_queens()
+    end_time = time.time()  # End time
+
     if solutions:
-        print(f"Found a solution for {n}-Queens problem python edition:")
+        print(f"Found a solution for {n}-Queens problem in python:")
         display_board(solutions[0])
     else:
         print(f"No solutions found for {n}-Queens problem.")
+
+    print(f"Execution time: {end_time - start_time} seconds")
