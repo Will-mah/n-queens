@@ -52,12 +52,17 @@ function displayBoard(board) {
 }
 
 // Usage example
-const n = 25;
+const n = 25; //board size n x n
+const startTime = Date.now();  // Start time
 const solver = new NQueens(n);
 const solutions = solver.solveNQueens();
+const endTime = Date.now();  // End time
+
 if (solutions.length > 0) {
-    console.log(`Found a solution for ${n}-Queens problem javascript edition:`);
+    console.log(`Found a solution for ${n}-Queens problem:`);
     displayBoard(solutions[0]);
 } else {
     console.log(`No solutions found for ${n}-Queens problem.`);
 }
+
+console.log(`Execution time: ${(endTime - startTime) / 1000} seconds`);
