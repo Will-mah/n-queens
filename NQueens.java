@@ -71,7 +71,7 @@ public class NQueens {
         List<int[]> solutions = solver.solveNQueens();
         long endTime = System.currentTimeMillis();
         if (!solutions.isEmpty()) {
-            System.out.println("Found a solution for " + n + "-Queens problem:");
+            System.out.println("Found a solution for " + n + "-Queens problem java edition:");
             displayBoard(solutions.get(0));
         } else {
             System.out.println("No solutions found for " + n + "-Queens problem.");
